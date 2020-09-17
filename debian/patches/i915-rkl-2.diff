@@ -1,0 +1,26 @@
+commit a84caff71be99989858c42b275faf4720b41ab84
+Author: sunil kumar dora sermsity <sunilx.kumar.dora.sermsity@intel.com>
+Date:   Fri Aug 21 20:02:53 2020 +0000
+
+        intel: Add PCI ID support to RKL platform
+    
+        Missing RKL PCI ID preventing below test cases to succeed on RKL Platform.
+        igt@kms_frontbuffer_tracking
+        igt@kms_draw-crc
+        igt@kms_big_fb
+    
+        Signed-off-by: sunil kumar dora sermsity <sunilx.kumar.dora.sermsity@intel.com>
+        Reviewed-by: Matt Roper <matthew.d.roper@intel.com>
+
+diff --git a/intel/intel_chipset.c b/intel/intel_chipset.c
+index f6e37ee7..c3ce8f51 100644
+--- a/intel/intel_chipset.c
++++ b/intel/intel_chipset.c
+@@ -35,6 +35,7 @@ static const struct pci_device {
+ 	uint16_t gen;
+ } pciids[] = {
+ 	/* Keep ids sorted by gen; latest gen first */
++	INTEL_RKL_IDS(12),
+ 	INTEL_TGL_12_IDS(12),
+ 	INTEL_EHL_IDS(11),
+ 	INTEL_ICL_11_IDS(11),

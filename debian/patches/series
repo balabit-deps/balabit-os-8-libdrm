@@ -1,2 +1,3 @@
 01_default_perms.diff
-fix-realpath-vs-firefox.diff
+i915-rkl-1.diff
+i915-rkl-2.diff

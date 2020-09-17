@@ -1,0 +1,43 @@
+commit 669e1087ab60637744ae0f3f15b8c1608d2a8653
+Author: José Roberto de Souza <jose.souza@intel.com>
+Date:   Wed Jul 8 10:44:53 2020 -0700
+
+    intel: sync i915_pciids.h with kernel
+    
+    Two new patches landed in kernel adding new PCI ids:
+    123f62de419f ("drm/i915/rkl: Add RKL platform info and PCI ids")
+    52797a8e8529 ("drm/i915/ehl: Add new PCI ids")
+    
+    Cc: Matt Roper <matthew.d.roper@intel.com>
+    Signed-off-by: José Roberto de Souza <jose.souza@intel.com>
+
+diff --git a/intel/i915_pciids.h b/intel/i915_pciids.h
+index 662d8351..d6cb2899 100644
+--- a/intel/i915_pciids.h
++++ b/intel/i915_pciids.h
+@@ -588,7 +588,11 @@
+ 	INTEL_VGA_DEVICE(0x4551, info), \
+ 	INTEL_VGA_DEVICE(0x4541, info), \
+ 	INTEL_VGA_DEVICE(0x4E71, info), \
++	INTEL_VGA_DEVICE(0x4557, info), \
++	INTEL_VGA_DEVICE(0x4555, info), \
+ 	INTEL_VGA_DEVICE(0x4E61, info), \
++	INTEL_VGA_DEVICE(0x4E57, info), \
++	INTEL_VGA_DEVICE(0x4E55, info), \
+ 	INTEL_VGA_DEVICE(0x4E51, info)
+ 
+ /* TGL */
+@@ -605,4 +609,13 @@
+ 	INTEL_VGA_DEVICE(0x9AD9, info), \
+ 	INTEL_VGA_DEVICE(0x9AF8, info)
+ 
++/* RKL */
++#define INTEL_RKL_IDS(info) \
++	INTEL_VGA_DEVICE(0x4C80, info), \
++	INTEL_VGA_DEVICE(0x4C8A, info), \
++	INTEL_VGA_DEVICE(0x4C8B, info), \
++	INTEL_VGA_DEVICE(0x4C8C, info), \
++	INTEL_VGA_DEVICE(0x4C90, info), \
++	INTEL_VGA_DEVICE(0x4C9A, info)
++
+ #endif /* _I915_PCIIDS_H */
