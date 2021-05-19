@@ -1,14 +1,53 @@
-libdrm (2.4.102-1ubuntu1~20.04.1) focal; urgency=medium
+libdrm (2.4.105-3~20.04.1) focal; urgency=medium
 
-  * Backport to focal. (LP: #1902244)
+  * Backport to focal. (LP: #1923880, #1925320)
 
- -- Timo Aaltonen <tjaalton@debian.org>  Thu, 17 Sep 2020 12:29:42 +0300
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 19 May 2021 11:15:08 +0300
 
-libdrm (2.4.102-1ubuntu1) groovy; urgency=medium
+libdrm (2.4.105-3) experimental; urgency=medium
 
-  * patches: Add support for Intel Rocket Lake.
+  * Revert a commit causing additional dependencies to be added to *.pc.in.
+    Also drop libpciaccess-dev from libdrm-dev Depends.
 
- -- Timo Aaltonen <tjaalton@debian.org>  Thu, 27 Aug 2020 12:40:12 +0300
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 08 May 2021 22:52:07 +0300
+
+libdrm (2.4.105-2) experimental; urgency=medium
+
+  * control: Add libpciaccess-dev to libdrm-dev depends.
+  * revert-set-fb-modifiers-flag.diff: Revert a commit which broke
+    chrome on certain setups.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 05 May 2021 18:04:17 +0300
+
+libdrm (2.4.105-1) experimental; urgency=medium
+
+  * New upstream release. (LP: #1923880)
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 15 Apr 2021 08:45:32 +0300
+
+libdrm (2.4.104-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add signing-key from Simon Ser.
+  * control: Manpages now need python3-docutils instead of docbook-xsl
+    to build, make it so.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 28 Jan 2021 12:18:32 +0200
+
+libdrm (2.4.103-2) unstable; urgency=medium
+
+  * hurd-port.diff: Dropped. (Closes: #975658)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 27 Nov 2020 09:32:38 +0200
+
+libdrm (2.4.103-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #970304)
+  * control, rules, hurd-port.diff: Add support for Hurd. (Closes:
+    #909436)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 10 Nov 2020 19:51:20 +0200
 
 libdrm (2.4.102-1) unstable; urgency=medium
 
