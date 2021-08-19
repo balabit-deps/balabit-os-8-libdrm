@@ -1,3 +1,10 @@
+libdrm (2.4.105-3~20.04.2) focal; urgency=medium
+
+  * intel-Add-support-for-ADLP.patch: Add support for ADL-P. (LP:
+    #1940504)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 19 Aug 2021 11:52:23 +0300
+
 libdrm (2.4.105-3~20.04.1) focal; urgency=medium
 
   * Backport to focal. (LP: #1923880, #1925320)
