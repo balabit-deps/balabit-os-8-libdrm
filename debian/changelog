@@ -1,3 +1,9 @@
+libdrm (2.4.107-8ubuntu1~20.04.2) focal-security; urgency=medium
+
+  * No-change rebuild in the -security pocket (LP: #1963751)
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 08 Mar 2022 12:33:12 -0500
+
 libdrm (2.4.107-8ubuntu1~20.04.1) focal; urgency=medium
 
   * Backport to focal. (LP: #1949553)
